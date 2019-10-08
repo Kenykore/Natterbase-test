@@ -3,7 +3,7 @@
   "description": "Natterbase Test",
   "scripts": {
     "lint": "eslint .",
-    "start": "npm run-script run-prod",
+    "start": "nodemon index.js",
     "run-prod":"pm2 start index.js",
     "test": "jest --verbose --detectOpenHandles "
   },
