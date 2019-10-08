@@ -42,7 +42,7 @@ exports.FindLowestIndex= async(req,res,next)=>{
                     counter2=0
                     counter1++
                     if(counter1<magic.length){
-                        return  findpathRecurrsion()
+                        return  await findpathRecurrsion()
                     }
                     else{
                        return -1          
@@ -52,11 +52,11 @@ exports.FindLowestIndex= async(req,res,next)=>{
             if(path==null){
                 path=magic[counter1]-distance[counter2]+magic[counter2+1]
                 counter2++
-                return  findpathRecurrsion()
+                return  await  findpathRecurrsion()
             }
              path=path-distance[counter2]+magic[counter2+1]
              counter2++ 
-             return findpathRecurrsion()
+             return await findpathRecurrsion()
         }
         if(index == -1){
             return await res.status(200).json({

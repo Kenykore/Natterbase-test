@@ -1,5 +1,5 @@
-let magic=[1,2]
-let dist=[1,2]
+let magic=[3, 2, 5, 4]
+let dist= [2, 3, 4, 2]
 
 function findpath(){
     let index=null
